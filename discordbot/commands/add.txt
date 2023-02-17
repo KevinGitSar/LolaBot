@@ -1,0 +1,19 @@
+const { SlashCommandBuilder } = require('discord.js');
+
+module.exports = {
+	data: new SlashCommandBuilder()
+		.setName('add')
+		.setDescription('Adds two numbers together.')
+		.addNumberOption(option => option.setName('number1')
+                                         .setRequired(true)
+                                         .setDescription('The first number'))
+		.addNumberOption(option => option.setName('number2')
+                                         .setRequired(true)
+                                         .setDescription('The second number')),
+	async execute(interaction) {
+		const num1 = interaction.options.getNumber("number1");
+		const num2 = interaction.options.getNumber("number2");
+        const result = num1 + num2;
+		return interaction.reply("result: " + result);
+	},
+};
