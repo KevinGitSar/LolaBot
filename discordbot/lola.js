@@ -19,4 +19,4 @@ client.on("messageCreate", async (message)=>{
 });
 
 // Add Token to login
-client.login("MTAyODAxNzcxNjk3MzU1MTc2Nw.Gk1A1L.lfalDV6e4XPNQz3ZYDP0vXTQ5wc47Pg6P6VKN8");
+client.login("");
